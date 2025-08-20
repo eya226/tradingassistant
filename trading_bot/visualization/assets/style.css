@@ -1,0 +1,81 @@
+/* General Body Styling */
+body {
+    background-color: #13192B;
+    color: #E0E3EB;
+    font-family: 'Inter', sans-serif; /* A good fallback is a clean sans-serif */
+}
+
+/* Main Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+}
+
+/* Card Styling with Glassmorphism Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05); /* Frosted glass effect */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+h1, h2, h3, h4, h5, h6 {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Input and Button Styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #E0E3EB;
+}
+.form-control::placeholder {
+    color: #E0E3EB;
+    opacity: 0.7;
+}
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #00FF00;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #00FF00;
+    border-color: #00FF00;
+    color: #13192B;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #00cc00;
+    border-color: #00cc00;
+}
+
+/* Metric Display Styling */
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.metric-label {
+    font-size: 1rem;
+    color: #E0E3EB;
+    text-transform: uppercase;
+}
+.positive-metric {
+    color: #00FF00;
+}
+.negative-metric {
+    color: #FF4136;
+}
+.neutral-metric {
+    color: #E0E3EB;
+}
