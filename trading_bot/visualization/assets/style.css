@@ -2,7 +2,7 @@
 body {
     background-color: #13192B;
     color: #E0E3EB;
-    font-family: 'Inter', sans-serif; /* A good fallback is a clean sans-serif */
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
 }
 
 /* Main Dashboard Container */
@@ -10,16 +10,20 @@ body {
     padding: 20px;
 }
 
-/* Card Styling with Glassmorphism Effect */
+/* Card Styling with Enhanced Glassmorphism and Grid Overlay */
 .glass-card {
-    background: rgba(255, 255, 255, 0.05); /* Frosted glass effect */
+    background-color: rgba(40, 50, 80, 0.4); /* Slightly bluer glass tint */
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 25px 25px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* For Safari */
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* Header styles */
@@ -29,46 +33,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Input and Button Styling */
-.input-group {
-    margin-bottom: 20px;
-}
-
 .form-control {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #E0E3EB;
+    font-size: 1.1rem;
 }
 .form-control::placeholder {
     color: #E0E3EB;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 .form-control:focus {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.3);
     border-color: #00FF00;
-    box-shadow: none;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
     color: #FFFFFF;
 }
 
+/* Enhanced Button Style */
 .btn-primary {
     background-color: #00FF00;
     border-color: #00FF00;
     color: #13192B;
     font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
 }
 .btn-primary:hover {
-    background-color: #00cc00;
-    border-color: #00cc00;
+    background-color: #00FF00;
+    border-color: #00FF00;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
 }
 
 /* Metric Display Styling */
 .metric-value {
     font-size: 2.5rem;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 .metric-label {
     font-size: 1rem;
     color: #E0E3EB;
     text-transform: uppercase;
+    opacity: 0.8;
 }
 .positive-metric {
     color: #00FF00;
